@@ -5,7 +5,7 @@
 body {
     font-size: medium;
     font-family: 'Delius', cursive;
-    padding: .5em;
+    padding: 1em;
     margin: 0px;
 }
 
@@ -52,16 +52,16 @@ p {
     margin-bottom: 0px;
 }
 
-#kyoto {
+#chicken {
     background-color: #8A6BBE;
 }
 
-#berlin {
+#beef {
     background-color: #554236;
     color: white;
 }
 
-#london {
+#sushi {
     background-color: #E83015;
 }
 /********** for desktop **********/
