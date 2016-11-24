@@ -7,13 +7,14 @@ body {
     font-size: medium;
     font-family: 'Delius', cursive;
     margin: 0px;
+    padding-bottom: 30px;
 }
 
 /*header*/
 #header-nav {
     background-color: #F596AA;
     border-radius: 0px;
-    min-height: 70px;
+    min-height: 50px;
     border-bottom: black 2px solid;
 }
 
@@ -24,33 +25,47 @@ body {
 .navbar-brand h1 {
     line-height: 0.6;
     margin-left: 30px;
-}
-
-button.navbar-toggle {
-    margin-top: 16px;
+    margin-top: 15px;
 }
 
 .navbar-nav {
     margin: 0px -15px;
 }
 
+#nav-list {
+    font-size: 1.2em;
+}
+
 hr {
     margin: 0px auto;
     width: 95%;
+    border-color: black;
 }
 
 /*content*/
 section {
     background-color: #FB966E;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    padding-top: 10px;
 }
 
 section p {
     padding: 10px;
 }
 
-section h2 {
-    padding-top: 10px;
+section span {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
 }
+
 
 
 /*responsiveness*/
