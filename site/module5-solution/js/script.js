@@ -90,12 +90,16 @@ $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
       var chosenCategoryShortName = chooseRandomCategory(categories)["short_name"];
-      insertProperty(homeHtml, "randomCategoryShortName", 'chosenCategoryShortName');
+      insertProperty(homeHtml, "randomCategoryShortName", chosenCategoryShortName);
       var homeHtmlToInsertIntoMainPage = function(homeHtml) {
         insertHtml("#main-content", homeHtml)
       };
       homeHtmlToInsertIntoMainPage(homeHtml);
-
+    },
+    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
+}, // ***** <---- TODO: STEP 1: Substitute [...] ******
+  true); // Explicitely setting the flag to get JSON from server processed into an object literal
+});
 
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
@@ -123,11 +127,7 @@ $ajaxUtils.sendGetRequest(
       // of how to do that.
       // ....
 
-    },
-    false); // False here because we are getting just regular HTML from the server, so no need to process JSON.
-}, // ***** <---- TODO: STEP 1: Substitute [...] ******
-  true); // Explicitely setting the flag to get JSON from server processed into an object literal
-});
+
 // *** finish **
 
 
@@ -142,6 +142,7 @@ function chooseRandomCategory (categories) {
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
 
   // return category object with that randomArrayIndex
+  console.log(categories[randomArrayIndex])
   return categories[randomArrayIndex];
 }
 
